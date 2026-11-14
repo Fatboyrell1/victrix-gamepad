@@ -1,0 +1,14 @@
+/* Victrix Purple / White Gamepad Viewer overlay */
+/* Host this CSS and victrix_controller_overlay.png in the SAME public folder. */
+/* Designed for GamepadViewer's PS4 (ds4) skin. */
+body { background: transparent !important; margin: 0 !important; }
+.controller.ds4 { position: relative; width: 768px !important; height: 512px !important; background: url("victrix_controller_overlay.png") center / contain no-repeat !important; }
+/* Hide stock artwork, but preserve GamepadViewer's interactive DOM */
+.ds4 .back, .ds4 .front, .ds4 .face, .ds4 .sticks, .ds4 .abxy, .ds4 .dpad, .ds4 .triggers, .ds4 .bumpers, .ds4 .touchpad { background-image: none !important; }
+/* Approximate control alignment for the custom front image (768x512). */
+.ds4 .stick { position:absolute !important; width:96px !important; height:96px !important; border-radius:50%; background:radial-gradient(circle at 40% 35%,#f5f5f5 0 42%,#a69baa 64%,#7722c8 70%,transparent 72%) !important; opacity:0.92; }
+.ds4 .stick.left { left:136px !important; top:128px !important; }
+.ds4 .stick.right { left:405px !important; top:242px !important; }
+.ds4 .stick.pressed { filter:drop-shadow(0 0 9px #a800ff); }
+.ds4 .button.pressed, .ds4 .face .pressed, .ds4 .dpad .pressed, .ds4 .trigger.pressed, .ds4 .bumper.pressed { filter:drop-shadow(0 0 12px #b900ff) brightness(1.5) !important; opacity:1 !important; }
+/* Controls can vary by Gamepad Viewer skin/version. Fine tune selectors and offsets after testing. */
